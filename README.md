@@ -33,7 +33,10 @@ docker compose build
 # start the containers
 docker compose up -d
 
-# enter the container, you can get the name with 'docker ps -a'
+# using the script to enter the environment
+./start.sh
+
+# enter the container manually, you can get the name with 'docker ps -a'
 docker exec -ti <name> bash
 
 # this drops you in the container and you can nvim into lib/ or test/ and start editing!
@@ -45,8 +48,13 @@ docker exec -ti <name> bash
 docker compose down
 ```
 
-## Sending Commands
+## Connecting with VSCode
+- sadly this won't work with vscodium (darn microsoft), you need the default _proprietary_ binary
+- you need the **devcontainers** package installed
+- vscode should take care of the rest, when opening it should prompt to open the container in the workspace
 
+## Sending Commands
+- I'd suggest editing in the environment not running commands from host -> container but it's preference
 - one annoying thing about the unit test framework is that it only prints when something breaks so I'll present a `dune runtest` for a failing test here
 
 ```sh
