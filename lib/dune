@@ -1,0 +1,7 @@
+(library
+ (name practice_problems)
+ (public_name practice-problems)
+ (libraries base stdio)
+ (modules beginner intermediate)
+ (preprocess
+  (pps ppx_jane)))

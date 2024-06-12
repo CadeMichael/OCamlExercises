@@ -1,0 +1,9 @@
+services:
+  ocaml-dev:
+    build: .
+    volumes:
+      - .:/home/opam/project
+    working_dir: /home/opam/project
+    command: bash
+    user: opam
+    tty: true

@@ -1,0 +1,6 @@
+(library
+ (name practice_tests)
+ (libraries base stdio practice_problems)
+ (inline_tests)
+ (preprocess
+  (pps ppx_jane)))
